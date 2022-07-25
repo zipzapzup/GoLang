@@ -24,7 +24,7 @@ func main() {
 
 	// float - decimal values
 	// Has 2 values: float32 float64
-	var f float32 = 3.2342323
+	var f float32 = -3.2342323
 	fmt.Println(f)
 
 	fmt.Println("Greetings")
