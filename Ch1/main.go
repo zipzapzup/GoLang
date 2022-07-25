@@ -22,5 +22,10 @@ func main() {
 	var e int = 0x14
 	fmt.Println("Base 10:", a+b, "Binary: ", c, "Octal: ", d, "Hexa:", e)
 
+	// float - decimal values
+	// Has 2 values: float32 float64
+	var f float32 = 3.2342323
+	fmt.Println(f)
+
 	fmt.Println("Greetings")
 }
