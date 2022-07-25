@@ -27,5 +27,19 @@ func main() {
 	var f float32 = -3.2342323
 	fmt.Println(f)
 
-	fmt.Println("Greetings")
+	// rune - unicode value (character set mapping)
+	// represented via single quotes ''
+	var g rune = '1'
+	var h rune = 'h'
+	fmt.Println(g, h)
+
+	// strings
+	// use backquote to escape the strings - \n is newline \" will show quotes
+	var i string = "Greetings and \n\"Salutations\""
+	fmt.Println(i)
+
+	// strings - raw strings literal
+	// use backquotes to represent the raw strings ``
+	var j string = `" And in Here you can get \n all Raw\n Strings`
+	fmt.Println(j)
 }
