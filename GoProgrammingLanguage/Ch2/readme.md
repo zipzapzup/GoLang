@@ -1,7 +1,7 @@
 # Chapter 2 - Program Structure
 
-In Golang, there are specific names that are pre-declared and cannot be used as names, and only used when it permits it.
- 
+In Golang, there are specific names that are pre-declared  and can only used when it permits it. Otherwise, it represents the similar functionality such as true, false
+
 Names are:
 
 break        default      func         interface    select
