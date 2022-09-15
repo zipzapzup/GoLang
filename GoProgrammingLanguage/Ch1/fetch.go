@@ -22,6 +22,7 @@ func main() {
 			fmt.Fprintf(os.Stderr, "Fetch: reading %s: %v\n", url, err)
 			os.Exit(1)
 		}
+		fmt.Printf("HTTP Status Code: %s\n", resp.Status)
 		fmt.Printf("%s", b)
 
 	}
