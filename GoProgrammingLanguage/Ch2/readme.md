@@ -1,7 +1,7 @@
 # Chapter 2 - Program Structure
 
-In Golang, there are specific names that are reserved for the programs. These names cannot be used by the programs as these are reserved keywords.
-
+In Golang, there are specific names that are pre-declared and cannot be used as names, and only used when it permits it.
+ 
 Names are:
 
 break        default      func         interface    select
