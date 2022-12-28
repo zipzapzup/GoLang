@@ -27,4 +27,5 @@ GoLang is a compiled language, it has a compuler in which you need to build the 
   - processor Core 1- task 1
   - processor Core 2- task 2
   - processor Core 3- task 3
-- In comparing these two idea, the ability to perform concurrent programming allow you to complete the execution of the job much faster compared to executing sequentially.
+- In comparing these two idea, the ability to perform concurrent programming allow you to complete the execution of the job much faster compared to executing sequentially. In this lesson, this is called FetchALL.
+
