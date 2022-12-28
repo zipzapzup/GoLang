@@ -28,4 +28,27 @@ GoLang is a compiled language, it has a compuler in which you need to build the 
   - processor Core 2- task 2
   - processor Core 3- task 3
 - In comparing these two idea, the ability to perform concurrent programming allow you to complete the execution of the job much faster compared to executing sequentially. In this lesson, this is called FetchALL.
+- In Chapter 6 we learn about go routine and channel. Channel is the communications mechanism or channel into which allow go routine to pass values to antoher go routine. In the fetchAll program, we can spot that the main function is a go routine that creates a channel. Main runs a loop of other go statements which creates additional goroutines.
+  - main -> 1 go routine and create 1 channel
+    - loop go 1 sends message to ch
+    - loop go 2 sends message to ch
+    - loop go 3 sends message to ch
+- Note how in the execution of fetch all URL, the print command fmt.Println(<-ch) will print on whichever go routine finish first. ch <- denotes that we are sending a message to the channel and <- ch means this function will receive all of the channel.
+ 
+## 1.7
+- In Chapter 1.7 these present introductions to web server and how through the http library, we can serve the request to a handler via the DefaultServeMux pattern matching.
+
+## 1.8
+- Switch is one form of control flow in golang aside from if statement and for loops. Switch has the same usage as a case in bash and you can use switch using two format, where in one format you can specify a function and switch will wait for the functions return value OR a tagless switch inside a function, where it is generally assumed switch is true.:
+  - switch funcA() { case "heads": heads++; case "tails" L tails++}
+  - switch {case x> 5: x++; case x <=5: x--}
+- break and continue is another statements in golang, where it is used in control flow (for loops, ifs). 
+  - Break is used to break the loop and move to the next statement.
+  - Continue is used to continue the iteration of the loop, moving to the next iteration.
+- Type is used to create a structure in golang programs.
+- Pointers: Golang provides pointers as a way to use them as references or use them to make changes to the value. There are 2 different types of pointers
+  - & operator is a pointer that will return the address of a variable.
+  - * operator retrieves the variable that the pointer refers to.
+- Methods and Interfaces: Methods is a function that is associated with a named type. Interfaces are abstract types that allow a different treatment in the same way based on what methods they have.
+- Packages in golang refers to as modules. You can find and try to get yourselves familiarised with golang standard library: https://golang.org/pkg or pkg.go.dev/std. Go doc is also an important tools to view documentation, one example is: go doc http.ListenAndServe.
 
