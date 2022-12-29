@@ -109,3 +109,37 @@ Package are stored in directory: `$GOPATH/src/gopl.io/ch1/helloworld`
 
 Each package serves as a separate name space for its declarations. Within image package, for example, the identifier refers to different function than in the other package. Concept of namespaces exist in Golang packages.
 
+Packages are a way for golang to modularised its code, create library and a way to build modules. In Golang, a folder is known as a package. 
+
+To be able to import packages, golang will try to find the packages from its $GOPATH/src/ directory and if the packages is not found then you cannot use the packages. To be able to perform a local import of the packages, you need to do the following:
+
+1. Initialised a go mod root directory by running `go mod init example.com`. Doing this will set the root directory of your cwd as example.com and will create a go.mod file.
+2. After establishing the root directory, golang will understand the reference to the root and be able to import packages with a local reference. When initialising your code add the extensions of the packages being imported, in this case its: `import (example.com/tempconv)`
+3. Golang will load all of the packages and sub .go command in the directory as a reference.
+
+## 2.7 Scope
+
+Scope is a compile time property of Golang which determines the existence of which variables or name exist. In Golang, there are a few different scope:
+1. Function Scope (Lexical block scope) 
+  - Any function that is defined in the lexical block scope exist locally or within the function. It can be used within the lexical block scope. Some examples of this are func, if, for loop statements.
+2. Package Scope 
+  - Any declarations made at the package scope can be accessed by any file that exist on the package. The use of exported variables (UpperCase names) allow access from the other packages.
+3. File Scope
+  - File scope declarations are normally made available by any functions that reference it on the file, this is normally called from by using the `import` command. File level declarations can be accessed by any function inside the file. A variable can be declared on the file scope by using (lowercase names) to prevent it from being used externally.
+
+Compiler look after the reference and follow through all of the references to the variables to load it. If compilers found no declaration, it will report an undeclared name.
+
+In packaging, golang has a special function called the init() function which will run first before the main function. In case of multiple init, it will be determined in lexicographical order (Alphabetic). Main function is loaded last by the compiler.
+
+## 3. Basic Data Type
+
+Golang has 4 main Categories of types:
+1. Basic Types
+  - Basic types are numbers, strings, and booleans. 
+2. Aggregate Types
+  - Aggregate types refers to arrays, structs that are formed by the basic types. 
+3. Reference Types
+  - Reference types refers to pointers, slices, maps, functions and channels. Are all that refers to program variables or state indirectly.
+4. Interface Types
+
+## 3.1 Integers
