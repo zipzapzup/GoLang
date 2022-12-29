@@ -4,6 +4,7 @@ import "fmt"
 
 // package declaration
 const boilingPoint = 212.0
+const Boiling = 212.0
 
 func main() {
 	// function scope declaration within main function
@@ -20,4 +21,10 @@ func main() {
 
 	fmt.Printf("boiling point = %v, %v \n", f, c)
 
+	any()
+
+}
+
+func any() {
+	fmt.Printf("Execution from any function: %v", boilingPoint)
 }
