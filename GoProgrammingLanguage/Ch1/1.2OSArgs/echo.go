@@ -13,7 +13,7 @@ func main() {
 	fmt.Println(s)
 }
 
-// BigO O(n) Space - String Concatenation
+// BigO O(n^2) Space - String Concatenation
 // BigO O(n) Time
 //
 // Important point, the string "s"
@@ -31,3 +31,9 @@ func main() {
 //
 // string will occupy a quadratic space in proportion to the number of args
 // s will be garbage collected in due time
+
+// A more efficient method is to use
+// strings.join(s, sep)
+// Space Complexity is O(n)
+// It uses a builder type with Grow function
+// to allocates enough memory in one go
