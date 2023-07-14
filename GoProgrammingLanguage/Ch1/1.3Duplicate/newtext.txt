@@ -9,3 +9,10 @@ yes and no
 no and yes
 however
 however however
+basket
+ball
+bytes
+bites
+aa
+ab 
+ac

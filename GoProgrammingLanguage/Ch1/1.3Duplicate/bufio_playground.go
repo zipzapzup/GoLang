@@ -9,6 +9,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"sort"
 	"strings"
 )
 
@@ -49,15 +50,30 @@ func main() {
 		}
 	}
 
-	fmt.Println("Count How Many Words in the Input")
+	fmt.Println("001. Count How Many Words in the Input")
 	for key, value := range count {
 		fmt.Printf("%d\t %s\n", value, key)
 
 	}
 
+	// Sort the keys and use the previous maps
+	fmt.Println("002. Printing Sorted")
+	sortedKeys := []string{}
+	sortedKeys = sortMap(count)
+	for _, value := range sortedKeys {
+		fmt.Printf("%d \t %s\n", count[value], value)
+	}
+
 }
 
+func sortMap(mapInput map[string]int) []string {
+	stringList := []string{}
+	for key, _ := range mapInput {
+		stringList = append(stringList, key)
+	}
 
-func sortMap( mapInput map[string]int ) sortedMap [string]int {
-	return mapInput
+	// sort Strings
+	sort.Strings(stringList)
+
+	return stringList
 }
