@@ -1,6 +1,8 @@
 // Dup prints the text of each line that appears more than one
 // in the standard input, preceded by its count
 // echo "ASD\n World\n World\n World" | ./dup1
+// go run dup1.go < newtext.go
+// each line is not split
 
 package main
 
