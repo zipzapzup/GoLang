@@ -12,4 +12,5 @@ func main() {
 	// example of overflow
 	// var u uint8 = 255
 	// fmt.Println(u, u+1, u*u)
+	// use math/big packages
 }
