@@ -75,6 +75,10 @@ func main() {
 	// however arrays size cannot be changed
 	// arrays does not have append or remove function to remove or add extra elements
 
+	arr20 := [32]int{1, 2, 3, 4, 5}
+	zeroArray(&arr20)
+	fmt.Println("Zero Array :", arr20)
+
 }
 
 // function to empty an array to 0
