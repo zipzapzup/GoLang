@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 module GoLangExercise/Practice
 
 go 1.20
@@ -19,3 +20,8 @@ require (
 	mvdan.cc/gofumpt v0.4.0 // indirect
 	mvdan.cc/xurls/v2 v2.4.0 // indirect
 )
+=======
+module example/module
+
+go 1.20
+>>>>>>> 5ab27de148fc59c57439eef875727450a39eece0
