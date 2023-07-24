@@ -22,6 +22,8 @@ func main() {
 
 	fmt.Println(x)
 
+	fmt.Println(appendValue([]int{}, &x))
+
 }
 
 // add version 1
@@ -41,6 +43,19 @@ func add(v int, t *tree) {
 	} else {
 		t.right = newtree
 	}
+}
+
+// func to add the value to a slice
+func appendValue(v []int, t *tree) []int {
+
+	if t != nil {
+
+		v = appendValue(v, t.left)
+		v = append(v, t.value)
+		v = appendValue(v, t.right)
+
+	}
+	return v
 }
 
 // func printTree(t *tree) {
