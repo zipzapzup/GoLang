@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 type tree struct {
 	value       int
@@ -19,6 +22,8 @@ func main() {
 	add(5, &x)
 	add(99, &x)
 	add(20, &x)
+
+	strings.Split()
 
 	fmt.Println(x)
 
