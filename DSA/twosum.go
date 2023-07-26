@@ -22,6 +22,8 @@ func main() {
 
 	fmt.Println(twoSumFast(input, 9))
 
+	input_1470 := []int{2, 5, 1, 3, 4, 7}
+
 }
 
 // O(N^2) Time Complexity
@@ -71,5 +73,9 @@ func twoSumFast(nums []int, target int) []int {
 		}
 	}
 	return result
+
+}
+
+func shuffle(nums []int, n int) []int {
 
 }
