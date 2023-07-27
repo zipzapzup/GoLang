@@ -36,6 +36,18 @@ func main() {
 	arr3 = insertv2(arr3, 1, 100)
 	fmt.Println(arr3)
 
+	arr5 := []int{}
+
+	fmt.Println(&arr5)
+
+	arr5 = append(arr5, 1)
+	// memory address different
+	fmt.Println(&arr5[0])
+
+	// memory address different suggests O(Log(N) Operation for Memory?)
+	arr5 = append(arr5, 1)
+	fmt.Println(&arr5[0])
+
 }
 
 // insert func to insert a slice at specific index
