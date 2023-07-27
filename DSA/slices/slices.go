@@ -33,6 +33,9 @@ func main() {
 	arr3 = insert(arr3, 1, -2)
 	fmt.Println(arr3)
 
+	arr3 = insertv2(arr3, 1, 100)
+	fmt.Println(arr3)
+
 }
 
 // insert func to insert a slice at specific index
@@ -46,4 +49,11 @@ func insert(arr []int, index, value int) []int {
 	arr[index] = value
 
 	return arr[:length]
+}
+
+func insertv2(arr []int, index, value int) []int {
+	for i := len(arr) - 1; i > index; i-- {
+		arr[i] = arr[i-1]
+	}
+	return arr
 }
