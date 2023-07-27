@@ -41,6 +41,9 @@ func main() {
 // insert func to insert a slice at specific index
 //
 //	1, -10, 7, 10000, 8
+//
+// O(N) Time Complexity
+// O(N) Space Complexity
 func insert(arr []int, index, value int) []int {
 	length := len(arr)
 
@@ -51,9 +54,12 @@ func insert(arr []int, index, value int) []int {
 	return arr[:length]
 }
 
+// O(N) Time Complexity
+// O(1) Space Complexity
 func insertv2(arr []int, index, value int) []int {
 	for i := len(arr) - 1; i > index; i-- {
 		arr[i] = arr[i-1]
 	}
+	arr[index] = value
 	return arr
 }
