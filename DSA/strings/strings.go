@@ -18,7 +18,7 @@ func main() {
 	fmt.Println(5381 * 33)
 
 	z := "hello"
-	for _, i := range z {
-		fmt.Println(int(i), i)
+	for i, v := range z {
+		fmt.Println(i, v, z[i])
 	}
 }
