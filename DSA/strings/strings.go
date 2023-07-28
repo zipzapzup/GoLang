@@ -2,7 +2,9 @@ package main
 
 import (
 	"fmt"
+	"reflect"
 	"strings"
+	"testing"
 )
 
 func main() {
@@ -17,10 +19,11 @@ func main() {
 
 	fmt.Println(5381 * 33)
 
-	z := "hello"
+	z := "hello in a new world"
+	r1 := []rune(" ")
 	for i, v := range z {
 		fmt.Println(i, v, z[i])
-		if v == rune(' ') {
+		if v == r1[0] {
 			fmt.Println("A space here")
 		}
 	}
@@ -32,6 +35,23 @@ func main() {
 	fmt.Println(checkStrings(s1, s2))
 
 	stringbyte("Hello")
+
+	c1 := 'c'
+	fmt.Println(reflect.TypeOf(c1))
+
+	fmt.Println("compareStrings :")
+	fmt.Println(compareStrings("ABC", "ABC"))
+
+	fmt.Println(s1 == s2)
+
+	checkStringsv2("asd", "d")
+
+	stringLiteral()
+
+	countString("helloo", "o")
+
+	arr := []int{1, 2, 3, 4, 5}
+	fmt.Println(arr[:0], arr[:1], arr[2:3])
 
 }
 
@@ -53,11 +73,40 @@ func checkStrings(s, sub string) bool {
 	return false
 }
 
+func TestCheckStringsAnotherVersion(t *testing.T) {
+	var x = []struct {
+		input1, input2 string
+		result         bool
+	}{
+		{
+			input1: "hello there world",
+			input2: "o",
+			result: true,
+		},
+		{
+			input1: "arrivederci",
+			input2: "i",
+			result: true,
+		},
+	}
+
+	for _, test := range x {
+		if checkStrings(test.input1, test.input2) != test.result {
+			t.Error(`checkStrings( ,) !=,v`, test.input1, test.input2, test.result)
+		}
+	}
+
+}
+
 // check strings through function
 func checkStringsv2(s, sub string) bool {
 	// Contains will go through each character in strings
 	// O(n) Time Complexity
 	return strings.Contains(s, sub)
+}
+
+func compareStrings(a, b string) bool {
+	return a == b
 }
 
 func stringLiteral() string {
@@ -74,4 +123,8 @@ func stringbyte(s string) {
 
 	// len(s) is also accessible
 	fmt.Println("length of s:", len(s))
+}
+
+func countString(s, c string) int {
+	return strings.Count(s, c)
 }
