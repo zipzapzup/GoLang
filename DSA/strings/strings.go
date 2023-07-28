@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package main
 
 import (
@@ -22,3 +23,24 @@ func main() {
 		fmt.Println(i, v, z[i])
 	}
 }
+=======
+package main
+
+import "fmt"
+
+func main() {
+	fmt.Println("Strings")
+
+	s := "Mary had a little lamb"
+
+	fmt.Println(s)
+
+	for i := 0; i < len(s); i++ {
+		if s[i] == ' ' {
+			fmt.Println(i, "there is a space")
+		} else {
+			fmt.Println(string(s[i]))
+		}
+	}
+}
+>>>>>>> 3a1ba7a (integer)

@@ -11,6 +11,10 @@ func main() {
 	fmt.Println("OR")
 	fmt.Println(math.Abs(float64(30)))
 
+	a := 126
+	fmt.Println(126 % 10)
+	a = a / 10
+	fmt.Println(a)
 }
 
 // absoluteValue function helps with int
@@ -21,4 +25,13 @@ func absoluteValue(num int) int {
 		return -num
 	}
 	return num
+}
+
+func splitdigit(num int) int {
+	list := []int{}
+
+	if num > 0 {
+
+	}
+
 }
