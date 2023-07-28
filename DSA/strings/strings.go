@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 package main
 
 import (
@@ -76,24 +75,3 @@ func stringbyte(s string) {
 	// len(s) is also accessible
 	fmt.Println("length of s:", len(s))
 }
-=======
-package main
-
-import "fmt"
-
-func main() {
-	fmt.Println("Strings")
-
-	s := "Mary had a little lamb"
-
-	fmt.Println(s)
-
-	for i := 0; i < len(s); i++ {
-		if s[i] == ' ' {
-			fmt.Println(i, "there is a space")
-		} else {
-			fmt.Println(string(s[i]))
-		}
-	}
-}
->>>>>>> 3a1ba7a (integer)
