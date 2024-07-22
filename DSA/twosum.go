@@ -75,7 +75,3 @@ func twoSumFast(nums []int, target int) []int {
 	return result
 
 }
-
-func shuffle(nums []int, n int) []int {
-
-}
